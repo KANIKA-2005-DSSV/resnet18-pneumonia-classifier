@@ -9,7 +9,7 @@ This project focuses on detecting **pneumonia from chest X-ray images** using a 
 *  Merged original train + validation datasets
 *  Applied **Stratified 80/20 split** for better validation
 *  Used **ResNet18 (ImageNet pretrained)**
-*  Progressive fine-tuning (freeze → unfreeze layers)
+*  Fine-tuning: Unfreezes **layer4 + FC head** only
 *  Handled class imbalance using **weighted loss (pos_weight)**
 *  Visualized training (accuracy & loss curves)
 * 📊 Evaluated using:
@@ -125,13 +125,13 @@ Saved outputs:
 
 ---
 
-## 🖥️ How to Run (Google Colab)
+## How to Run (Google Colab)
 
 1. Upload dataset ZIP to Google Drive
 2. Update path in code:
 
 ```python id="m7k2z9"
-ZIP_PATH = "/content/drive/MyDrive/archive.zip"
+ZIP_PATH =  "/content/drive/MyDrive/archive (1).zip"
 ```
 
 3. Run:
